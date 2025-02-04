@@ -44,7 +44,7 @@ body {
     background-color: #575757;
 }
 
-/* Hlavní obsah - centrovaný na stránce */
+/* Hlavní obsah - centrovaný na stránce s pevnou šířkou */
 .content {
     margin-left: 250px; /* Nech prostor pro sidebar */
     display: flex;
@@ -52,6 +52,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: calc(100% - 250px); /* Obsah zabírá zbytek obrazovky vedle sidebaru */
     text-align: center;
 }
 
@@ -64,6 +65,7 @@ header {
 
 main {
     padding: 20px;
+    max-width: 600px; /* Maximální šířka obsahu pro udržení čistého vzhledu */
 }
 
 .button {
