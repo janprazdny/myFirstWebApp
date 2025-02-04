@@ -2,18 +2,19 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-    color: #333;
     display: flex;
+    height: 100vh;
 }
 
-/* Sidebar vlevo */
+/* Sidebar vlevo - fixní umístění */
 .sidebar {
     width: 250px;
     background-color: #333;
     color: white;
-    padding: 15px;
-    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
     box-sizing: border-box;
 }
 
@@ -43,10 +44,13 @@ body {
     background-color: #575757;
 }
 
-/* Hlavní obsah */
+/* Hlavní obsah - vedle sidebaru */
 .content {
-    flex: 1;
+    margin-left: 270px; /* Nech prostor pro sidebar */
     padding: 20px;
+    background-color: #f9f9f9;
+    height: 100%;
+    overflow-y: auto;
 }
 
 header {
@@ -77,7 +81,5 @@ footer {
     background-color: #333;
     color: white;
     padding: 10px;
-    position: relative;
-    width: 100%;
-    bottom: 0;
+    text-align: center;
 }
