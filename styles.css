@@ -44,15 +44,15 @@ body {
     background-color: #575757;
 }
 
-/* Hlavní obsah - vertikální a horizontální centrování */
+/* Hlavní obsah - centrovaný na stránce */
 .content {
+    margin-left: 250px; /* Nech prostor pro sidebar */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
     text-align: center;
-    width: 100%; /* Zajistí správné centrování */
-    margin-left: 250px; /* Posun od sidebaru */
 }
 
 header {
@@ -84,6 +84,6 @@ footer {
     background-color: #333;
     color: white;
     padding: 10px;
-    text-align: center;
     width: 100%;
+    text-align: center;
 }
