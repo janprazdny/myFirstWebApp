@@ -4,7 +4,6 @@ body {
     padding: 0;
     display: flex;
     height: 100vh;
-    overflow: hidden;
 }
 
 /* Sidebar vlevo - fixní umístění */
@@ -45,24 +44,18 @@ body {
     background-color: #575757;
 }
 
-/* Hlavní obsah - fixní centrování bez ohledu na text */
+/* Hlavní obsah - horizontální centrování uprostřed stránky */
 .content {
-    margin-left: 250px; /* Posun od sidebaru */
+    margin-left: 250px; /* Nech prostor pro sidebar */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
+    justify-content: center; /* Horizontální zarovnání na střed */
+    padding: 20px;
 }
 
-/* Box pro text se stejnou šířkou na všech stránkách */
 .main-box {
     max-width: 600px;
     width: 100%;
-    padding: 20px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+    text-align: center;
 }
 
 header {
@@ -95,4 +88,5 @@ footer {
     color: white;
     padding: 10px;
     border-radius: 0 0 8px 8px;
+    margin-top: 20px;
 }
