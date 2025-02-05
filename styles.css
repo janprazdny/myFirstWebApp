@@ -44,19 +44,18 @@ body {
     background-color: #575757;
 }
 
-/* Hlavní obsah - horizontální centrování uprostřed stránky */
+/* Hlavní obsah */
 .content {
     margin-left: 250px; /* Nech prostor pro sidebar */
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    flex-direction: column;
+    padding: 0 20px; /* Prostor kolem obsahu */
+    flex-grow: 1;
 }
 
 .main-box {
     max-width: 600px;
     width: 100%;
     text-align: center;
+    margin: auto; /* Vertikální centrování ostatního obsahu */
 }
 
 header {
@@ -64,13 +63,15 @@ header {
     padding: 20px;
     color: white;
     border-radius: 8px 8px 0 0;
-    width: 100%; /* Zajistí plnou šířku */
-    margin-right: 0; /* Pro jistotu, pokud tam bylo odsazení */
-    box-sizing: border-box; /* Zahrne padding do šířky */
+    width: calc(100% - 250px); /* Zohledni sidebar vlevo */
+    position: fixed; /* Fixní nahoře */
+    left: 250px; /* Aby se nepřekrýval se sidebar */
+    top: 0;
+    box-sizing: border-box;
 }
 
 main {
-    padding: 20px;
+    padding: 140px 20px 20px; /* Odsazení pod header */
 }
 
 .button {
